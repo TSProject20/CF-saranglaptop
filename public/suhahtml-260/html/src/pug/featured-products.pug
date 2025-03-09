@@ -1,0 +1,304 @@
+doctype html
+html(lang="en")
+    head
+        include inc/head.pug
+
+    body
+        include inc/loader.pug
+
+        // Header Area
+        .header-area#headerArea
+            .container.h-100.d-flex.align-items-center.justify-content-between
+                // Back Button
+                .back-button
+                    a(href="home.html")
+                        svg(xmlns="http://www.w3.org/2000/svg", width="24", height="24", fill="currentColor", class="bi bi-arrow-left", viewBox="0 0 16 16")
+                            path(fill-rule="evenodd", d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z")
+
+                // Page Title
+                .page-heading
+                    h6.mb-0 Featured Products
+
+                // Filter Option
+                .filter-option(data-bs-toggle="offcanvas", data-bs-target="#suhaFilterOffcanvas", aria-controls="suhaFilterOffcanvas")
+                    svg(xmlns="http://www.w3.org/2000/svg", width="20", height="20", fill="currentColor", class="bi bi-sliders", viewBox="0 0 16 16")
+                        path(fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z")
+
+        include inc/filter.pug
+
+        .page-content-wrapper
+
+            // Top Products
+            .top-products-area.py-3
+                .container
+                    .section-heading.d-flex.align-items-center.justify-content-between
+                        h6 Featured Products
+
+                    .row.g-3
+                        // Featured Product Card
+                        .col-6.col-md-4.col-lg-3
+                            .card.featured-product-card
+                                .card-body
+                                    // Badge
+                                    span.badge.badge-warning.custom-badge
+                                        i.lni.lni-star
+                                    .product-thumbnail-side
+                                        // Wishlist Button 
+                                        a.wishlist-btn.shadow-sm.border(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/14.png", alt="")
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Blue Skateboard
+                                        // Price 
+                                        p.sale-price
+                                            | $39.8
+                                            span $89
+
+                        // Featured Product Card
+                        .col-6.col-md-4.col-lg-3
+                            .card.featured-product-card
+                                .card-body
+                                    // Badge
+                                    span.badge.badge-warning.custom-badge
+                                        i.lni.lni-star
+                                    .product-thumbnail-side
+                                        // Wishlist Button 
+                                        a.wishlist-btn.shadow-sm.border(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/15.png", alt="")
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Travel Bag
+                                        // Price 
+                                        p.sale-price
+                                            | $14.7
+                                            span $21
+
+                        // Featured Product Card
+                        .col-6.col-md-4.col-lg-3
+                            .card.featured-product-card
+                                .card-body
+                                    // Badge
+                                    span.badge.badge-warning.custom-badge
+                                        i.lni.lni-star
+                                    .product-thumbnail-side
+                                        // Wishlist Button 
+                                        a.wishlist-btn.shadow-sm.border(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/16.png", alt="")
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Cotton T-shirts
+                                        // Price 
+                                        p.sale-price
+                                            | $3.69
+                                            span $5
+
+                        // Featured Product Card
+                        .col-6.col-md-4.col-lg-3
+                            .card.featured-product-card
+                                .card-body
+                                    // Badge
+                                    span.badge.badge-warning.custom-badge
+                                        i.lni.lni-star
+                                    .product-thumbnail-side
+                                        // Wishlist Button 
+                                        a.wishlist-btn.shadow-sm.border(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/6.png", alt="")
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Roof Lamp
+                                        // Price 
+                                        p.sale-price
+                                            | $27.9
+                                            span $31
+
+                        // Featured Product Card
+                        .col-6.col-md-4.col-lg-3
+                            .card.featured-product-card
+                                .card-body
+                                    // Badge
+                                    span.badge.badge-warning.custom-badge
+                                        i.lni.lni-star
+                                    .product-thumbnail-side
+                                        // Wishlist Button 
+                                        a.wishlist-btn.shadow-sm.border(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/14.png", alt="")
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Blue Skateboard
+                                        // Price 
+                                        p.sale-price
+                                            | $39.8
+                                            span $89
+
+                        // Featured Product Card
+                        .col-6.col-md-4.col-lg-3
+                            .card.featured-product-card
+                                .card-body
+                                    // Badge
+                                    span.badge.badge-warning.custom-badge
+                                        i.lni.lni-star
+                                    .product-thumbnail-side
+                                        // Wishlist Button 
+                                        a.wishlist-btn.shadow-sm.border(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/15.png", alt="")
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Travel Bag
+                                        // Price 
+                                        p.sale-price
+                                            | $14.7
+                                            span $21
+
+                        // Featured Product Card
+                        .col-6.col-md-4.col-lg-3
+                            .card.featured-product-card
+                                .card-body
+                                    // Badge
+                                    span.badge.badge-warning.custom-badge
+                                        i.lni.lni-star
+                                    .product-thumbnail-side
+                                        // Wishlist Button 
+                                        a.wishlist-btn.shadow-sm.border(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/16.png", alt="")
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Cotton T-shirts
+                                        // Price 
+                                        p.sale-price
+                                            | $3.69
+                                            span $5
+
+                        // Featured Product Card
+                        .col-6.col-md-4.col-lg-3
+                            .card.featured-product-card
+                                .card-body
+                                    // Badge
+                                    span.badge.badge-warning.custom-badge
+                                        i.lni.lni-star
+                                    .product-thumbnail-side
+                                        // Wishlist Button 
+                                        a.wishlist-btn.shadow-sm.border(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/6.png", alt="")
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Roof Lamp
+                                        // Price 
+                                        p.sale-price
+                                            | $27.9
+                                            span $31
+                        
+                        // Featured Product Card
+                        .col-6.col-md-4.col-lg-3
+                            .card.featured-product-card
+                                .card-body
+                                    // Badge
+                                    span.badge.badge-warning.custom-badge
+                                        i.lni.lni-star
+                                    .product-thumbnail-side
+                                        // Wishlist Button 
+                                        a.wishlist-btn.shadow-sm.border(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/14.png", alt="")
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Blue Skateboard
+                                        // Price 
+                                        p.sale-price
+                                            | $39.8
+                                            span $89
+
+                        // Featured Product Card
+                        .col-6.col-md-4.col-lg-3
+                            .card.featured-product-card
+                                .card-body
+                                    // Badge
+                                    span.badge.badge-warning.custom-badge
+                                        i.lni.lni-star
+                                    .product-thumbnail-side
+                                        // Wishlist Button 
+                                        a.wishlist-btn.shadow-sm.border(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/15.png", alt="")
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Travel Bag
+                                        // Price 
+                                        p.sale-price
+                                            | $14.7
+                                            span $21
+
+                        // Featured Product Card
+                        .col-6.col-md-4.col-lg-3
+                            .card.featured-product-card
+                                .card-body
+                                    // Badge
+                                    span.badge.badge-warning.custom-badge
+                                        i.lni.lni-star
+                                    .product-thumbnail-side
+                                        // Wishlist Button 
+                                        a.wishlist-btn.shadow-sm.border(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/16.png", alt="")
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Cotton T-shirts
+                                        // Price 
+                                        p.sale-price
+                                            | $3.69
+                                            span $5
+
+                        // Featured Product Card
+                        .col-6.col-md-4.col-lg-3
+                            .card.featured-product-card
+                                .card-body
+                                    // Badge
+                                    span.badge.badge-warning.custom-badge
+                                        i.lni.lni-star
+                                    .product-thumbnail-side
+                                        // Wishlist Button 
+                                        a.wishlist-btn.shadow-sm.border(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/6.png", alt="")
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Roof Lamp
+                                        // Price 
+                                        p.sale-price
+                                            | $27.9
+                                            span $31
+
+        include inc/footer-nav.pug
+
+        include inc/footer.pug
