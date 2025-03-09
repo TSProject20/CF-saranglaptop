@@ -1,0 +1,470 @@
+doctype html
+html(lang="en")
+    head
+        include inc/head.pug
+
+    body
+        include inc/loader.pug
+
+        // Header Area
+        .header-area#headerArea
+            .container.h-100.d-flex.align-items-center.justify-content-between
+                // Back Button
+                .back-button
+                    a(href="home.html")
+                        svg(xmlns="http://www.w3.org/2000/svg", width="24", height="24", fill="currentColor", class="bi bi-arrow-left", viewBox="0 0 16 16")
+                            path(fill-rule="evenodd", d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z")
+
+                // Page Title
+                .page-heading
+                    h6.mb-0 Shop List
+
+                // Filter Option
+                .filter-option(data-bs-toggle="offcanvas", data-bs-target="#suhaFilterOffcanvas", aria-controls="suhaFilterOffcanvas")
+                    svg(xmlns="http://www.w3.org/2000/svg", width="20", height="20", fill="currentColor", class="bi bi-sliders", viewBox="0 0 16 16")
+                        path(fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z")
+
+        include inc/filter.pug
+
+        .page-content-wrapper
+
+            // Top Products
+            .top-products-area.py-3
+                .container
+                    .section-heading.d-flex.align-items-center.justify-content-between
+                        h6 All Products
+
+                        // Select Product Catagory
+                        .select-product-catagory
+                            select.form-select#selectProductCatagory(name="selectProductCatagory", aria-label="Default select example")
+                                option(selected) Short by
+                                option(value="1") Newest
+                                option(value="2") Popular
+                                option(value="3") Ratings
+
+                    .product-catagories
+                        .row.g-3
+                            // Single Catagory
+                            .col-4
+                                a.shadow-sm(href="#")
+                                    img(src="img/product/5.png", alt="")
+                                    | Furniture
+
+                            // Single Catagory
+                            .col-4
+                                a.shadow-sm(href="#")
+                                    img(src="img/product/9.png", alt="")
+                                    | Shoes
+
+                            // Single Catagory
+                            .col-4
+                                a.shadow-sm(href="#")
+                                    img(src="img/product/4.png", alt="")
+                                    | Dress
+
+                    .row.g-3
+                        // Single Weekly Product Card 
+                        .col-12.col-md-6
+                            .card.horizontal-product-card
+                                .card-body.d-flex.align-items-center
+                                    .product-thumbnail-side
+                                        // Badge 
+                                        span.badge.badge-success Sale
+                                        // Wishlist Button 
+                                        a.wishlist-btn(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/10.png", alt="")
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Modern Sofa
+                                        // Price 
+                                        p.sale-price
+                                            i.lni.lni-dollar
+                                            | $64
+                                            span $89
+                                        // Rating 
+                                        .product-rating
+                                            i.lni.lni-star-filled
+                                            | 4.88 (39)
+                                        // Buy Now Button 
+                                        a.btn.btn-danger.btn-sm(href="#")
+                                            i.me-1.lni.lni-cart
+                                            | Buy Now
+
+                        // Single Weekly Product Card 
+                        .col-12.col-md-6
+                            .card.horizontal-product-card
+                                .card-body.d-flex.align-items-center
+                                    .product-thumbnail-side
+                                        // Badge 
+                                        span.badge.badge-primary Sale
+                                        // Wishlist Button 
+                                        a.wishlist-btn(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/7.png", alt="")
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Office Chair
+                                        // Price 
+                                        p.sale-price
+                                            i.lni.lni-dollar
+                                            | $100
+                                            span $160
+                                        // Rating 
+                                        .product-rating
+                                            i.lni.lni-star-filled
+                                            | 4.82 (125)
+                                        // Buy Now Button 
+                                        a.btn.btn-danger.btn-sm(href="#")
+                                            i.me-1.lni.lni-cart
+                                            | Buy Now
+
+                        // Single Weekly Product Card 
+                        .col-12.col-md-6
+                            .card.horizontal-product-card
+                                .card-body.d-flex.align-items-center
+                                    .product-thumbnail-side
+                                        // Badge 
+                                        span.badge.badge-danger -10%
+                                        // Wishlist Button 
+                                        a.wishlist-btn(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/12.png", alt="")
+                                            // Offer Countdown Timer: Please use event time this format: YYYY/MM/DD hh:mm:ss 
+                                            ul.offer-countdown-timer.d-flex.align-items-center.shadow-sm(data-countdown="2022/12/09 23:59:59")
+                                                li
+                                                    span.days 0
+                                                    | d
+                                                li
+                                                    span.hours 0
+                                                    | h
+                                                li
+                                                    span.minutes 0
+                                                    | m
+                                                li
+                                                    span.seconds 0
+                                                    | s
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Sun Glasses
+                                        // Price 
+                                        p.sale-price
+                                            i.lni.lni-dollar
+                                            | $24
+                                            span $32
+                                        // Rating 
+                                        .product-rating
+                                            i.lni.lni-star-filled
+                                            | 4.79 (63)
+                                        // Buy Now Button 
+                                        a.btn.btn-danger.btn-sm(href="#")
+                                            i.me-1.lni.lni-cart
+                                            | Buy Now
+
+                        // Single Weekly Product Card 
+                        .col-12.col-md-6
+                            .card.horizontal-product-card
+                                .card-body.d-flex.align-items-center
+                                    .product-thumbnail-side
+                                        // Badge 
+                                        span.badge.badge-warning New
+                                        // Wishlist Button 
+                                        a.wishlist-btn(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/13.png", alt="")
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Wall Clock
+                                        // Price 
+                                        p.sale-price
+                                            i.lni.lni-dollar
+                                            | $31
+                                            span $47
+                                        // Rating 
+                                        .product-rating
+                                            i.lni.lni-star-filled
+                                            | 4.99 (7)
+                                        // Buy Now Button 
+                                        a.btn.btn-danger.btn-sm(href="#")
+                                            i.me-1.lni.lni-cart
+                                            | Buy Now
+                        
+                        // Single Weekly Product Card 
+                        .col-12.col-md-6
+                            .card.horizontal-product-card
+                                .card-body.d-flex.align-items-center
+                                    .product-thumbnail-side
+                                        // Badge 
+                                        span.badge.badge-success Sale
+                                        // Wishlist Button 
+                                        a.wishlist-btn(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/10.png", alt="")
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Modern Sofa
+                                        // Price 
+                                        p.sale-price
+                                            i.lni.lni-dollar
+                                            | $64
+                                            span $89
+                                        // Rating 
+                                        .product-rating
+                                            i.lni.lni-star-filled
+                                            | 4.88 (39)
+                                        // Buy Now Button 
+                                        a.btn.btn-danger.btn-sm(href="#")
+                                            i.me-1.lni.lni-cart
+                                            | Buy Now
+
+                        // Single Weekly Product Card 
+                        .col-12.col-md-6
+                            .card.horizontal-product-card
+                                .card-body.d-flex.align-items-center
+                                    .product-thumbnail-side
+                                        // Badge 
+                                        span.badge.badge-primary Sale
+                                        // Wishlist Button 
+                                        a.wishlist-btn(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/7.png", alt="")
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Office Chair
+                                        // Price 
+                                        p.sale-price
+                                            i.lni.lni-dollar
+                                            | $100
+                                            span $160
+                                        // Rating 
+                                        .product-rating
+                                            i.lni.lni-star-filled
+                                            | 4.82 (125)
+                                        // Buy Now Button 
+                                        a.btn.btn-danger.btn-sm(href="#")
+                                            i.me-1.lni.lni-cart
+                                            | Buy Now
+
+                        // Single Weekly Product Card 
+                        .col-12.col-md-6
+                            .card.horizontal-product-card
+                                .card-body.d-flex.align-items-center
+                                    .product-thumbnail-side
+                                        // Badge 
+                                        span.badge.badge-danger -10%
+                                        // Wishlist Button 
+                                        a.wishlist-btn(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/12.png", alt="")
+                                            // Offer Countdown Timer: Please use event time this format: YYYY/MM/DD hh:mm:ss 
+                                            ul.offer-countdown-timer.d-flex.align-items-center.shadow-sm(data-countdown="2022/12/09 23:59:59")
+                                                li
+                                                    span.days 0
+                                                    | d
+                                                li
+                                                    span.hours 0
+                                                    | h
+                                                li
+                                                    span.minutes 0
+                                                    | m
+                                                li
+                                                    span.seconds 0
+                                                    | s
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Sun Glasses
+                                        // Price 
+                                        p.sale-price
+                                            i.lni.lni-dollar
+                                            | $24
+                                            span $32
+                                        // Rating 
+                                        .product-rating
+                                            i.lni.lni-star-filled
+                                            | 4.79 (63)
+                                        // Buy Now Button 
+                                        a.btn.btn-danger.btn-sm(href="#")
+                                            i.me-1.lni.lni-cart
+                                            | Buy Now
+
+                        // Single Weekly Product Card 
+                        .col-12.col-md-6
+                            .card.horizontal-product-card
+                                .card-body.d-flex.align-items-center
+                                    .product-thumbnail-side
+                                        // Badge 
+                                        span.badge.badge-warning New
+                                        // Wishlist Button 
+                                        a.wishlist-btn(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/13.png", alt="")
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Wall Clock
+                                        // Price 
+                                        p.sale-price
+                                            i.lni.lni-dollar
+                                            | $31
+                                            span $47
+                                        // Rating 
+                                        .product-rating
+                                            i.lni.lni-star-filled
+                                            | 4.99 (7)
+                                        // Buy Now Button 
+                                        a.btn.btn-danger.btn-sm(href="#")
+                                            i.me-1.lni.lni-cart
+                                            | Buy Now
+                        
+                        // Single Weekly Product Card 
+                        .col-12.col-md-6
+                            .card.horizontal-product-card
+                                .card-body.d-flex.align-items-center
+                                    .product-thumbnail-side
+                                        // Badge 
+                                        span.badge.badge-success Sale
+                                        // Wishlist Button 
+                                        a.wishlist-btn(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/10.png", alt="")
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Modern Sofa
+                                        // Price 
+                                        p.sale-price
+                                            i.lni.lni-dollar
+                                            | $64
+                                            span $89
+                                        // Rating 
+                                        .product-rating
+                                            i.lni.lni-star-filled
+                                            | 4.88 (39)
+                                        // Buy Now Button 
+                                        a.btn.btn-danger.btn-sm(href="#")
+                                            i.me-1.lni.lni-cart
+                                            | Buy Now
+
+                        // Single Weekly Product Card 
+                        .col-12.col-md-6
+                            .card.horizontal-product-card
+                                .card-body.d-flex.align-items-center
+                                    .product-thumbnail-side
+                                        // Badge 
+                                        span.badge.badge-primary Sale
+                                        // Wishlist Button 
+                                        a.wishlist-btn(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/7.png", alt="")
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Office Chair
+                                        // Price 
+                                        p.sale-price
+                                            i.lni.lni-dollar
+                                            | $100
+                                            span $160
+                                        // Rating 
+                                        .product-rating
+                                            i.lni.lni-star-filled
+                                            | 4.82 (125)
+                                        // Buy Now Button 
+                                        a.btn.btn-danger.btn-sm(href="#")
+                                            i.me-1.lni.lni-cart
+                                            | Buy Now
+
+                        // Single Weekly Product Card 
+                        .col-12.col-md-6
+                            .card.horizontal-product-card
+                                .card-body.d-flex.align-items-center
+                                    .product-thumbnail-side
+                                        // Badge 
+                                        span.badge.badge-danger -10%
+                                        // Wishlist Button 
+                                        a.wishlist-btn(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/12.png", alt="")
+                                            // Offer Countdown Timer: Please use event time this format: YYYY/MM/DD hh:mm:ss 
+                                            ul.offer-countdown-timer.d-flex.align-items-center.shadow-sm(data-countdown="2022/12/09 23:59:59")
+                                                li
+                                                    span.days 0
+                                                    | d
+                                                li
+                                                    span.hours 0
+                                                    | h
+                                                li
+                                                    span.minutes 0
+                                                    | m
+                                                li
+                                                    span.seconds 0
+                                                    | s
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Sun Glasses
+                                        // Price 
+                                        p.sale-price
+                                            i.lni.lni-dollar
+                                            | $24
+                                            span $32
+                                        // Rating 
+                                        .product-rating
+                                            i.lni.lni-star-filled
+                                            | 4.79 (63)
+                                        // Buy Now Button 
+                                        a.btn.btn-danger.btn-sm(href="#")
+                                            i.me-1.lni.lni-cart
+                                            | Buy Now
+
+                        // Single Weekly Product Card 
+                        .col-12.col-md-6
+                            .card.horizontal-product-card
+                                .card-body.d-flex.align-items-center
+                                    .product-thumbnail-side
+                                        // Badge 
+                                        span.badge.badge-warning New
+                                        // Wishlist Button 
+                                        a.wishlist-btn(href="#")
+                                            i.lni.lni-heart
+                                        // Thumbnail 
+                                        a.product-thumbnail.d-block(href="single-product.html")
+                                            img(src="img/product/13.png", alt="")
+                                    .product-description
+                                        // Product Title 
+                                        a.product-title.d-block(href="single-product.html") Wall Clock
+                                        // Price 
+                                        p.sale-price
+                                            i.lni.lni-dollar
+                                            | $31
+                                            span $47
+                                        // Rating 
+                                        .product-rating
+                                            i.lni.lni-star-filled
+                                            | 4.99 (7)
+                                        // Buy Now Button 
+                                        a.btn.btn-danger.btn-sm(href="#")
+                                            i.me-1.lni.lni-cart
+                                            | Buy Now
+
+        include inc/footer-nav.pug
+
+        include inc/footer.pug

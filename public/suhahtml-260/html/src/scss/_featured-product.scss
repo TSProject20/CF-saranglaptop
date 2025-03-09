@@ -1,0 +1,96 @@
+/* Featured Product Card CSS */
+
+.featured-product-card {
+    position: relative;
+    z-index: 1;
+
+    .custom-badge {
+        position: absolute;
+        left: 1rem;
+        top: -1px;
+        z-index: 100;
+        height: 22px;
+        border-radius: 0;
+        padding: 0 0 0 .5rem;
+        line-height: 22px;
+        transform: rotate(90deg);
+
+        &::before {
+            border-color: $warning transparent $warning $warning;
+            border-style: solid;
+            border-width: 11px 6px;
+            content: "";
+            height: 22px;
+            position: absolute;
+            right: -13px;
+            top: 0;
+            width: 17px;
+            z-index: -2;
+        }
+    }
+
+    .product-thumbnail-side {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 0.5rem;
+
+        .product-thumbnail {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+
+            img {
+                max-height: 150px;
+            }
+        }
+
+        .wishlist-btn {
+            position: absolute;
+            top: 0rem;
+            right: 0rem;
+            z-index: 11;
+            width: 2rem;
+            height: 2rem;
+            background-color: $white;
+            border-radius: 50%;
+            color: $danger;
+            line-height: 1;
+            font-size: 1.125rem;
+            text-align: center;
+
+            i {
+                line-height: 32px;
+            }
+
+            &:hover,
+            &:focus {
+                transform: translateY(-2px);
+            }
+        }
+    }
+
+    .product-description {
+        position: relative;
+        z-index: 1;
+
+        .product-title {
+            margin-bottom: .25rem;
+            font-weight: 500;
+            font-size: 14px;
+            color: $heading;
+
+            &:hover,
+            &:focus {
+                color: $primary;
+            }
+        }
+
+        .sale-price {
+            margin-bottom: 0;
+            font-size: 18px;
+            font-weight: 500;
+            color: $heading;
+            line-height: 1;
+        }
+    }
+}
